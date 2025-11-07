@@ -15,7 +15,7 @@ const LanguageSwitcher = () => {
   const currentLanguage = languages.find((lang) => lang.code === language);
 
   return (
-    <div className="fixed top-4 right-4 z-50">
+    <div className="fixed top-4 left-4 md:left-auto md:right-4 z-50">
       <div className="relative">
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -46,7 +46,7 @@ const LanguageSwitcher = () => {
               className="fixed inset-0 z-40"
               onClick={() => setIsOpen(false)}
             />
-            <div className="absolute right-0 top-full mt-2 w-48 bg-[#2a2835] rounded-xl shadow-lg border border-white/10 z-50 overflow-hidden">
+            <div className="absolute left-0 md:left-auto md:right-0 top-full mt-2 w-48 bg-[#2a2835] rounded-xl shadow-lg border border-white/10 z-50 overflow-hidden">
               {languages.map((lang) => (
                 <button
                   key={lang.code}

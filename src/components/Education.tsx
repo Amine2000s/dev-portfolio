@@ -1,7 +1,6 @@
 import TitleTwo from "./ui/TitleTwo";
 import ExperienceCardLeft from "./ui/ExperienceCardLeft";
 import ExperienceCardRight from "./ui/ExperienceCardRight";
-import { useState, useEffect } from "react";
 import { FaGraduationCap } from "react-icons/fa";
 import templateData from "../../templateOneData.json";
 import { useLanguage } from "../contexts/LanguageContext";
@@ -15,18 +14,6 @@ const Education = () => {
     period: string;
     description: string;
   }>;
-  const [isLargeScreen, setIsLargeScreen] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsLargeScreen(window.innerWidth > 1250);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   const getLogoComponent = (item: any) => {
     // Always use graduation cap icon for the timeline circle
@@ -62,47 +49,13 @@ const Education = () => {
         {t("education.title")}
       </TitleTwo>
 
-      {isLargeScreen ? (
-        <>
-          <div className="absolute left-1/2 w-1 h-full bg-white/60 transform -translate-x-1/2" />
-          <ul className="py-4 space-y-12 relative">
-            {data.map((item, index) => {
-              const translatedEdu = translatedEducation[index] || item;
-              if (item.left === true) {
-                return (
-                  <div key={index} className="relative">
-                    <ExperienceCardLeft
-                      date={translatedEdu.period || ""}
-                      title={translatedEdu.title}
-                      foundation={translatedEdu.institution}
-                      description={translatedEdu.description}
-                      logo={getLogoComponent(item)}
-                      small={false}
-                    />
-                  </div>
-                );
-              } else {
-                return (
-                  <div key={index} className="relative">
-                    <ExperienceCardRight
-                      date={translatedEdu.period || ""}
-                      title={translatedEdu.title}
-                      foundation={translatedEdu.institution}
-                      description={translatedEdu.description}
-                      logo={getLogoComponent(item)}
-                    />
-                  </div>
-                );
-              }
-            })}
-          </ul>
-        </>
-      ) : (
-        <>
-          <div className="absolute w-1 h-full bg-white/60 transform -translate-x-1/2" />
-          <ul className="space-y-12">
-            {data.map((item, index) => {
-              const translatedEdu = translatedEducation[index] || item;
+      {/* Desktop timeline - hidden on mobile/tablet */}
+      <div className="hidden xl:block">
+        <div className="absolute left-1/2 w-1 h-full bg-white/60 transform -translate-x-1/2" />
+        <ul className="py-4 space-y-12 relative">
+          {data.map((item, index) => {
+            const translatedEdu = translatedEducation[index] || item;
+            if (item.left === true) {
               return (
                 <div key={index} className="relative">
                   <ExperienceCardLeft
@@ -111,14 +64,48 @@ const Education = () => {
                     foundation={translatedEdu.institution}
                     description={translatedEdu.description}
                     logo={getLogoComponent(item)}
-                    small={true}
+                    small={false}
                   />
                 </div>
               );
-            })}
-          </ul>
-        </>
-      )}
+            } else {
+              return (
+                <div key={index} className="relative">
+                  <ExperienceCardRight
+                    date={translatedEdu.period || ""}
+                    title={translatedEdu.title}
+                    foundation={translatedEdu.institution}
+                    description={translatedEdu.description}
+                    logo={getLogoComponent(item)}
+                  />
+                </div>
+              );
+            }
+          })}
+        </ul>
+      </div>
+
+      {/* Mobile/Tablet timeline - visible on mobile/tablet */}
+      <div className="xl:hidden">
+        <div className="absolute left-4 sm:left-8 w-1 h-full bg-white/60" />
+        <ul className="space-y-12">
+          {data.map((item, index) => {
+            const translatedEdu = translatedEducation[index] || item;
+            return (
+              <div key={index} className="relative">
+                <ExperienceCardLeft
+                  date={translatedEdu.period || ""}
+                  title={translatedEdu.title}
+                  foundation={translatedEdu.institution}
+                  description={translatedEdu.description}
+                  logo={getLogoComponent(item)}
+                  small={true}
+                />
+              </div>
+            );
+          })}
+        </ul>
+      </div>
     </section>
   );
 };

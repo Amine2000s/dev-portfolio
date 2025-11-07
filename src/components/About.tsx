@@ -53,7 +53,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="flex flex-wrap justify-center gap-28 py-20 relative"
+      className="flex flex-wrap justify-center gap-8 sm:gap-12 md:gap-20 lg:gap-28 py-12 sm:py-16 md:py-20 relative"
     >
       <motion.div
         ref={leftRef}
@@ -66,7 +66,7 @@ const About = () => {
 
       <motion.div
         ref={rightRef}
-        className="space-y-6 max-w-xl"
+        className="space-y-4 sm:space-y-6 max-w-xl w-full px-4 sm:px-0"
         initial={{ x: 100, opacity: 0 }}
         animate={rightControls}
       >

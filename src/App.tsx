@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <LanguageSwitcher />
-      <div className="max-w-[1300px] mx-auto px-12 min-h-screen text-white pt-[100px]">
+      <div className="max-w-[1300px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 min-h-screen text-white pt-20 sm:pt-24 md:pt-[100px]">
         <Navbar />
         {templateOneData.NavBar.about && <About />}
         {templateOneData.NavBar.projects && <Projects />}
