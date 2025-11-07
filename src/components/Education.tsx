@@ -15,7 +15,7 @@ const Education = () => {
     description: string;
   }>;
 
-  const getLogoComponent = (item: any) => {
+  const getLogoComponent = () => {
     // Always use graduation cap icon for the timeline circle
     return <FaGraduationCap className="w-6 h-6" />;
   };
@@ -43,7 +43,7 @@ const Education = () => {
                     title={translatedEdu.title}
                     foundation={translatedEdu.institution}
                     description={translatedEdu.description}
-                    logo={getLogoComponent(item)}
+                    logo={getLogoComponent()}
                     small={false}
                   />
                 </div>
@@ -56,7 +56,7 @@ const Education = () => {
                     title={translatedEdu.title}
                     foundation={translatedEdu.institution}
                     description={translatedEdu.description}
-                    logo={getLogoComponent(item)}
+                    logo={getLogoComponent()}
                   />
                 </div>
               );
