@@ -1,0 +1,110 @@
+{
+  "navbar": {
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "about": {
+    "viewResume": "View My Resume",
+    "tags": [
+      "Software Engineer",
+      "Devops",
+      "NetDevops",
+      "Solutions Builder"
+    ],
+    "description": "A passionate Software and DevOps Engineer, specializing in delivering efficient, reliable, and scalable solutions. 🌱 Always learning — excited to explore new technologies, frameworks, and ways to automate smarter."
+  },
+  "projects": {
+    "title": "My Projects",
+    "description": "Discover my creative and innovative projects, spanning design to development, and see how I can add value to your next endeavor",
+    "liveDemo": "Live Demo",
+    "github": "GitHub",
+    "items": [
+      {
+        "title": "Shortify – Custom URL Shortener with Visit Analytics",
+        "description": "Shortify is a work-in-progress URL shortener built using Spring MVC and Thymeleaf, designed to go beyond simple redirection by capturing meaningful visit analytics. The application demonstrates backend craftsmanship, modular design, and real-world deployment readiness."
+      },
+      {
+        "title": "DIGIQA – Digital Quality Assurance Platform",
+        "description": "DIGIQA is a full-stack web application developed in collaboration with the Quality Assurance Cell at Mohamed Khider University of Biskra. It aims to digitize quality assurance processes aligned with RNAQES (Référentiel National d'Assurance Qualité de l'Enseignement Supérieur), Algeria's national reference for quality assurance in higher education."
+      },
+      {
+        "title": "♻️ Biskra Nadifa – Smart Waste Management System for Biskra",
+        "description": "Biskra Nadifa (Arabic: \"A Clean Biskra\") is a waste management platform designed to address the escalating problem of unmanaged trash in Biskra city, Algeria. It facilitates digital coordination between citizens, cleaning agents (drivers), and system administrators to ensure responsive and efficient urban sanitation."
+      },
+      {
+        "title": "Kcube Controller Unit",
+        "description": "a Controller Unit of a Delivery Robot Prototype 'KCube' made in University of Biksra the application connect with the internal arduino bluetooth board HC05 through bluetooth sockets"
+      }
+    ]
+  },
+  "skills": {
+    "title": "My Skills",
+    "description": "My technical toolkit features these proficiencies. Feel free to customize this section!"
+  },
+  "experience": {
+    "title": "My Experience",
+    "items": [
+      {
+        "title": "DevOps / NetDevOps Engineer",
+        "company": "Infraxcode – Full-time",
+        "period": "Oct 2025 – Present",
+        "description": "🔧 INFRASTRUCTURE & AUTOMATION\n• Maintain and enhance on-premise infrastructure with focus on automation, scalability, and reliability\n• Develop automation scripts (Python, Bash) for provisioning, monitoring, and network operations\n• Streamline operations through automated deployment and configuration management\n\n☁️ CLOUD & CI/CD\n• Prototype and manage AWS-based environments for testing and proof-of-concept deployments\n• Build and improve CI/CD pipelines using GitLab CI to accelerate development cycles\n• Implement infrastructure-as-code practices for consistent deployments\n\n🤝 COLLABORATION\n• Collaborate across teams to integrate NetDevOps practices into DevOps workflows\n• Bridge network automation and DevOps processes for enhanced efficiency"
+      },
+      {
+        "title": "Junior Digital Transformation Consultant",
+        "company": "GIZ – Deutsche Gesellschaft für Internationale Zusammenarbeit",
+        "period": "Part-time · 2024 – 2025",
+        "description": "💼 CLIENT SUPPORT\n• Supported multiple Algerian SMEs in digital transformation initiatives\n• Conducted comprehensive needs assessments and advised on digital tools, cloud services, and workflow automation\n• Delivered tailored recommendations for technology adoption and process optimization\n\n📊 STRATEGY & PLANNING\n• Collaborated with cross-functional teams to design IT modernization roadmaps\n• Created strategic plans aligning business objectives with technology solutions\n\n🌱 COMMUNITY ENGAGEMENT\n• Contributed to workshops promoting digital literacy and sustainable technology integration\n• Facilitated knowledge transfer sessions for SME stakeholders"
+      },
+      {
+        "title": "Back-End Developer & Team Lead",
+        "company": "Quality Cell – University of Biskra",
+        "period": "Jan 2025 – April 2025",
+        "description": "🏗️ ARCHITECTURE & DEVELOPMENT\n• Architected layered Spring Boot backend for quality management system\n• Developed secure, HATEOAS-compliant REST APIs with role-based access (Spring Security)\n• Designed scalable system architecture supporting multiple concurrent users\n\n⚡ PERFORMANCE & MONITORING\n• Integrated GZIP compression, Spring AOP, and rate limiting for performance optimization\n• Implemented centralized asynchronous logging with MDC for advanced traceability\n• Reduced API response times by 40% through optimization techniques\n\n👥 LEADERSHIP\n• Led agile team of 5+ developers with weekly sprints and daily standups\n• Established technical documentation standards and code review processes\n• Mentored junior developers and facilitated knowledge sharing sessions\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🛠️ Tech Stack: Java 17 • Spring Boot • Spring Security • MySQL • Docker • Maven • Git • Swagger"
+      },
+      {
+        "title": "Back-End Developer",
+        "company": "Algerian Tech Makers",
+        "period": "Jul 2024 – Nov 2024",
+        "description": "💻 DEVELOPMENT\n• Contributed to internal HR platform development with focus on scalability\n• Designed optimized relational database schemas for efficient data management\n• Secured REST APIs with token-based authentication and implemented security best practices\n• Collaborated with frontend team to ensure seamless API integration\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🛠️ Tech Stack: TypeScript • Express.js • PostgreSQL"
+      },
+      {
+        "title": "Microsoft Learn Student Ambassador – Beta Rank",
+        "company": "Microsoft Learn",
+        "period": "Apr 2023 – Jul 2024",
+        "description": "🎓 WORKSHOPS & COMMUNITY\n• Hosted multiple Git and GitHub workshops for student developers\n• Promoted collaboration best practices and developer community engagement\n• Created educational content and hands-on exercises for workshop participants\n• Built a community of 100+ active learners and contributors"
+      },
+      {
+        "title": "Founding Member – Club Scientifique Debug",
+        "company": "University of Biskra",
+        "period": "Sep 2022 – Jul 2024",
+        "description": "🚀 FOUNDING & LEADERSHIP\n• Co-founded student-led tech club focused on peer learning and programming culture\n• Grew club participation from 0 to 80+ active members through strategic coordination\n• Established club structure, governance, and partnership with CS department\n• Led executive team of 8 members in organizing club activities\n\n🎯 EVENTS & MENTORSHIP\n• Organized 20+ coding workshops, guest speaker panels, and software project showcases\n• Mentored 30+ first-year students and guided 15+ group mini-projects\n• Coordinated inter-university tech competitions and hackathons\n• Facilitated peer-to-peer learning sessions and code review workshops"
+      }
+    ]
+  },
+  "education": {
+    "title": "My Education",
+    "items": [
+      {
+        "title": "Bachelor in Computer Science – Computer Systems",
+        "institution": "University of Biskra",
+        "period": "Sep 2021 – Jul 2024",
+        "description": "• Covered key subjects: algorithms, data structures, operating systems, compilers, cybersecurity, networking, AI, mobile and web development\n• Focused on system architecture and backend development with courses in Java, database systems, and UML modeling\n• Volunteered in ISNIB (International Symposium on New Information and Communication Technologies)\n• Participated in student tech clubs and supported academic outreach"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "description": "I'm always open to new opportunities and collaborations. Feel free to reach out through any of these channels.",
+    "email": "Email",
+    "phone": "Phone & WhatsApp",
+    "location": "Location",
+    "availableForRemote": "Available for remote work worldwide",
+    "lookingForward": "Looking Forward to Hearing from You!",
+    "lookingForwardDescription": "Whether you have a project in mind, a job opportunity, or just want to say hello, don't hesitate to reach out. I typically respond within 24 hours."
+  }
+}

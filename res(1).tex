@@ -1,0 +1,708 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=2 cm, % seperation between body and page edge from the left
+    right=2 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 79, 144} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={CHABI Amine sif eddine  CV},
+    pdfauthor={CHABI Amine sif eddine},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    % \usepackage[T1]{fontenc} % this breaks sb2nov
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0cm} % set column seperation
+\makeatletter
+\let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+\patchcmd{\ps@customFooterStyle}{\thepage}{
+    \color{gray}\textit{\small CHABI Amine sif eddine - Page \thepage{} of \pageref*{LastPage}}
+}{}{} % replace number by desired string
+\makeatother
+\pagestyle{customFooterStyle}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+\renewcommand\labelitemi{$\circ$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{Last updated in July 2025}\hspace{\widthof{Last updated in July 2025}}
+    }}}%
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    \placelastupdatedtext
+    \begin{header}
+    \textbf{\fontsize{24 pt}{24 pt}\selectfont Amine Sif Eddine Chabi}
+
+    \vspace{0.3 cm}
+
+    \normalsize
+    \mbox{{\color{black}\footnotesize\faMapMarker*}\hspace*{0.13cm}Algeria – Open to Relocation}%
+    \kern 0.25 cm%
+    \AND%
+    \mbox{\hrefWithoutArrow{mailto:chabiaminesifeddine@gmail.com}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}chabiaminesifeddine@gmail.com}}%
+    \kern 0.25 cm%
+    \AND%
+    \mbox{\hrefWithoutArrow{tel:+213777157757}{\color{black}{\footnotesize\faPhone*}\hspace*{0.13cm}+213 7 77 15 77 57}}%
+    \kern 0.25 cm%
+    \AND%
+    \mbox{\hrefWithoutArrow{https://amine2000s.github.io/personal-website/}{\color{black}{\footnotesize\faLink}\hspace*{0.13cm}amine2000s.github.io}}%
+    \kern 0.25 cm%
+    \AND%
+    \mbox{\hrefWithoutArrow{https://linkedin.com/in/amine-chabi-a90b7822a}{\color{black}{\footnotesize\faLinkedinIn}\hspace*{0.13cm}amine-chabi-a90b7822a}}%
+    \kern 0.25 cm%
+    \AND%
+    \mbox{\hrefWithoutArrow{https://github.com/Amine2000s}{\color{black}{\footnotesize\faGithub}\hspace*{0.13cm}Amine2000s}}%
+\end{header}
+
+    \vspace{0.3 cm - 0.3 cm}
+
+
+    \section{Profile}
+
+\begin{onecolentry}
+DevOps Engineer with a software engineering mindset, combining backend development experience with expertise in infrastructure automation. Skilled in Docker, CI/CD, and VPS deployments, with hands-on experience in Spring Boot, Express.js, MySQL, Redis, and Python scripting. Passionate about building scalable, reliable systems through automation and code-driven operations.\end{onecolentry}
+
+
+    
+    %\section{Quick Guide}
+
+    %\begin{onecolentry}
+     %   \begin{highlightsforbulletentries}
+
+
+      %  \item Each section title is arbitrary and each section contains a list of entries.
+
+       % \item There are 7 unique entry types: \textit{BulletEntry}, \textit{TextEntry}, \textit{EducationEntry}, \textit{ExperienceEntry}, \textit{NormalEntry}, \textit{PublicationEntry}, and \textit{OneLineEntry}.
+
+        %\item Select a section title, pick an entry type, and start writing your section!
+
+        %\item \href{https://docs.rendercv.com/user_guide/}{Here}, you can find a comprehensive user guide for RenderCV.
+
+
+        %\end{highlightsforbulletentries}
+    %\end{onecolentry}
+
+    \section{Education}
+
+\begin{twocolentry}{
+    \textit{Sep 2021 – Jul 2024}}
+    \textbf{University of Biskra}
+
+    \textit{Bachelor in Computer Science – Computer Systems}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Covered key subjects including algorithms, data structures, operating systems, compilers, logic, algebra, Cybersecurity, networking, artificial intelligence, mobile and web development
+        \item Volunteered in the International Symposium on New Information and Communication Technologies (ISNIB), contributing to event logistics and academic coordination
+        \item Participated in student tech clubs and supported academic outreach alongside the CS department
+        \item Focused on system architecture, backend development
+        \item Courses included Java development, database systems, UML modeling
+
+    \end{highlights}
+\end{onecolentry}
+
+\section{Experience}
+
+\begin{twocolentry}{
+    \textit{Oct 2025 – Present}}
+    \textbf{DevOps / NetDevOps Engineer}
+    
+    \textit{Infraxcode – Full-time}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Maintain and enhance on-premise infrastructure, focusing on automation, scalability, and reliability
+        \item Prototype and manage AWS-based environments for testing and proof-of-concept deployments
+        \item Develop automation scripts (Python, Bash) to streamline provisioning, monitoring, and network operations
+        \item Build and improve CI/CD pipelines using GitLab CI to support development and deployment workflows
+        \item Collaborate across teams to integrate network automation (NetDevOps) practices into DevOps processes
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{
+    \textit{Part-time · Aug 2025 – Present}}
+    \textbf{Junior Digital Transformation Consultant}
+    
+    \textit{GIZ – Deutsche Gesellschaft für Internationale Zusammenarbeit}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Supported Algerian small and medium-sized enterprises (SMEs) in their digital transformation initiatives
+        \item Conducted needs assessments and advised on the adoption of digital tools, cloud services, and workflow automation
+        \item Collaborated with cross-functional teams to design roadmaps for IT modernization and process optimization
+        \item Contributed to workshops promoting digital literacy and sustainable technology integration for SMEs
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+
+\begin{twocolentry}{
+    \textit{Biskra, Algeria}    
+        
+    \textit{Jan 2025 – April 2025}}
+    \textbf{Back-End Developer \& Team Lead}
+    
+    \textit{Quality Cell – University of Biskra}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Architected a layered Spring Boot backend for a quality management system
+        \item Developed secure, HATEOAS-compliant REST APIs with role-based access using Spring Security
+        \item Integrated GZIP compression, Spring AOP, and rate limiting for optimized performance
+        \item Implemented centralized asynchronous logging with MDC for advanced traceability
+        \item Led an agile team, set weekly sprints, tracked daily tasks, and wrote technical documentation
+        \item \textbf{Technologies:} Java 17, Spring Boot, Spring Security, MySQL, Docker, Maven, Git, Swagger
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{
+    \textit{Remote / Algeria}    
+        
+    \textit{Jul 2024 – Nov 2024}}
+    \textbf{Back-End Developer}
+    
+    \textit{Algerian Tech Makers}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Contributed to the development of an internal HR platform
+        \item Designed relational database schemas and secured REST APIs using token-based authentication
+        \item \textbf{Technologies:} TypeScript, Express.js, PostgreSQL
+    \end{highlights}
+\end{onecolentry}
+
+
+
+    
+ 
+
+
+
+    
+    %\section{Publications}
+
+
+
+        
+        %\begin{samepage}
+        %    \begin{twocolentry}{
+        %        Jan 2004
+        %    }
+        %        \textbf{3D Finite Element Analysis of No-Insulation Coils}
+
+         %       \vspace{0.10 cm}
+%
+         %       \mbox{Frodo Baggins}, \mbox{\textbf{\textit{John Doe}}}, \mbox{Samwise Gamgee}
+        %    \end{twocolentry}
+
+
+       %     \vspace{0.10 cm}
+%
+       %     \begin{onecolentry}
+       % \href{https://doi.org/10.1109/TASC.2023.3340648}{10.1109/TASC.2023.3340648}
+      %      \end{onecolentry}
+    %    \end{samepage}
+
+\section{Leadership \& Community Involvement}
+
+\begin{twocolentry}{
+    \textit{Apr 2023 – Jul 2024}}
+    \textbf{Microsoft Learn Student Ambassador – Beta Rank}
+    
+    \textit{Microsoft Learn}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Hosted a Git and GitHub workshops and promoted collaboration best practices
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{
+    \textit{Sep 2022 – Jul 2024}}
+    \textbf{Founding Member – Club Scientifique Debug}
+    
+    \textit{University of Biskra}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Co-founded a student-led tech club focused on peer learning, programming culture, and interdisciplinary collaboration
+        \item Organized regular events including coding workshops, guest speaker panels, and software project showcases
+        \item Supported first-year students with academic mentoring and guided group mini-projects
+        \item Coordinated communication with the CS department and helped grow club participation to 80+ active members
+    \end{highlights}
+\end{onecolentry}
+
+    
+ \section{Projects}
+ 
+\begin{twocolentry}{
+    \textit{}}
+    \textbf{MaharaTech Web Scraper}
+    \textit{\href{https://amine2000s.github.io/personal-website/blog/bac-web-scraper/}{\texttt{Read the blog}}}}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+
+\begin{onecolentry}
+    \begin{highlights}
+        \item Built a Python-based scraper to preserve MaharaTech course content during a national internet shutdown
+        \item Used Playwright for headless browser automation and login bypass using session cookies
+        \item Crawled DOM to extract course structure, YouTube links embedded in dynamic iframes
+        \item Parsed and saved lessons, video links, and metadata for offline access
+        \item Technologies: Python, Playwright, BeautifulSoup, HTML/JS, Cookie Injection
+    \end{highlights}
+\end{onecolentry}
+  %\  \begin{twocolentry}{
+    %\\textit{In Progress}}
+    %\\textbf{SAP BTP App for User Provisioning}
+%\\end{twocolentry}
+%\
+%\\vspace{0.10 cm}
+%\\begin{onecolentry}
+    %\\begin{highlights}
+        %\\item Built a secure Java-based app for provisioning user %\identities via SAP IAS/IPS
+        %\\item Integrated with SAP BTP using XSUAA and OAuth2 for %\secure service access
+        %\\item Demonstrated full user lifecycle flow: creation, %\update, and deprovisioning
+        %\\item \textbf{Concepts:} Identity Access Mgmt, SAP Cloud %\Security, User Federation
+ %\   \end{highlights}
+%\\end{onecolentry}
+%\\vspace{0.10 cm}
+%\
+\vspace{0.10 cm}
+
+%\\begin{twocolentry}{
+  %\  \textit{In Progress}}
+    %\\textbf{Vehicle Order Tracking Microservice via S/4HANA}
+%\\end{twocolentry}
+%\\vspace{0.10 cm}
+
+%\\vspace{0.10 cm}
+%\\begin{onecolentry}
+  %\  \begin{highlights}
+    %\    \item Developed a Java microservice consuming SAP S/4HANA APIs for tracking vehicle order statuses
+      %\  \item Connected via SAP API Hub and implemented OAuth2-secured data flow
+        %\\item Simulated logistics integration for vehicle production visibility
+        %\\item \textbf{Concepts:} SAP OData, S/4HANA Logistics, Java Integration, OAuth2
+    %\\end{highlights}
+%\\end{onecolentry}
+%\\vspace{0.10 cm}
+
+
+
+
+ 
+\vspace{0.10 cm}
+\begin{twocolentry}{
+    \textit{}}
+    \textbf{Shortify – URL Shortener}
+    \textit{\href{https://shortify-url-shortner-584s.onrender.com}{\texttt{shortify.onrender.com}}}}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Developed a layered Spring Boot application for URL shortening with analytics dashboard
+        \item Dockerized and deployed to Render (\faExclamationTriangle\ may have startup delay due to free-tier hosting)
+        \item MySql database hosted on Aiven.io
+        \item Technologies: Java, Spring Boot, Thymeleaf, Docker, MySql
+    \end{highlights}
+\end{onecolentry}
+
+
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{
+    \textit{GSoC Proposal}}
+    \textbf{Diomede – Medical Imaging Platform}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Proposed and prototyped a DICOM album platform with secure image access and metadata tools
+        \item Built a JavaFX PoC and initiated full-stack rewrite using Spring Boot and React
+        \item \textbf{Technologies:} Spring Boot, MongoDB, React, JavaFX, Docker, Keycloak, DICOM
+        \item \href{https://github.com/Amine2000s/dicom-albums-manager}{GitHub Repo}
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{
+    \textit{Biskra, Algeria}}
+    \textbf{Waste Management System – Biskra Nadifa}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Designed a RESTful backend system to coordinate municipal waste collection and driver dispatch
+        \item Developed optimized database schemas and service logic for real-time task tracking
+        \item \textbf{Technologies:} Java, Spring Boot, MySQL
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{
+    \textit{GitHub project}}
+    \textbf{Weather Forecast App with Redis Caching}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Built a Node.js Express application to display weather forecasts with dynamic search
+        \item Used Redis to cache API calls and reduce load on the weather service provider
+        \item \textbf{Technologies:} Node.js, Express.js, Redis, OpenWeatherMap API
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{
+    \textit{2023 – University of Biskra}}
+    \textbf{KCube – Android Controller for Delivery Robot}
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Built a mobile app to control a Bluetooth-enabled Arduino robot (HC-05)
+        \item Integrated directional movement, lid unlocking, and real-time map-based tracking
+        \item \textbf{Tech:} Android SDK, Java, Google Maps API, Bluetooth Sockets, Arduino
+        \item GitHub: \href{https://github.com/Amine2000s/KCube-Controller-App}{github.com/Amine2000s/KCube-Controller-App}
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{
+    \textit{University coursework}}
+    \textbf{Task Manager Desktop App}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Developed a JavaFX-based task manager with persistent MySQL storage
+        \item Implemented features like deadline alerts and CRUD operations with MVC structure
+        \item \textbf{Technologies:} Java, JavaFX, MySQL
+    \end{highlights}
+\end{onecolentry}
+
+
+\section{Open Source Contributions}
+
+\begin{twocolentry}{
+    \textit{Social Winter of Code 2022}}
+    \textbf{Mingler – Social Media Platform}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Enhanced user experience by adding logout confirmation modal and fixing layout responsiveness
+        \item Reproduced and documented issues clearly, leading to prompt fixes by maintainers
+        \item Participated in PR reviews, opened issues, and contributed actively to community discussions
+        \item \textbf{Technologies:} PHP, JavaScript, Bootstrap
+        \item \href{https://github.com/yourusername/mingler}{GitHub Repo}
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{
+    \textit{Google Summer of Code Proposal}}
+    \textbf{Diomede – Medical Imaging Platform}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Proposed architectural improvements and DICOM metadata extraction logic
+        \item Reorganized repository structure and improved documentation for contributors
+        \item Provided guidance in issue discussions and contributed pull requests to the core repository
+        \item \textbf{Technologies:} JavaFX, React, Spring Boot, MongoDB
+        \item \href{https://docs.google.com/document/d/1h_PNk40tztVvHmK8rwr_4W8jZD0EXsMA/edit?usp=sharing&ouid=103237394037038598452&rtpof=true&sd=true}{GSOC proposal}
+    \end{highlights}
+\end{onecolentry}
+
+\section{Certifications \& Training}
+
+\begin{twocolentry}{
+    \textit{Feb 2025 – May 2025}}
+    \textbf{GIZ Program – Digital \& Green Transformation}
+    
+    \textit{GIZ Algérie (Deutsche Gesellschaft für Internationale Zusammenarbeit)}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Selected as one of the top national candidates to join this competitive, high-impact training program
+        \item GIZ is the German international development agency promoting sustainable economic and digital reform worldwide
+        \item Completed a certified track qualifying for the role of Junior Digital Transformation Consultant
+        \item Gained hands-on experience in:
+        \begin{itemize}
+            \item Business Process Management (BPM) using Camunda
+            \item CRM simulation through the CAFYB platform
+            \item Data analytics and dashboard creation using Microsoft Power BI
+        \end{itemize}
+        \item Final score: 76.78/100 — ranked 3rd out of 30 participants
+    \end{highlights}
+\end{onecolentry}
+
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{
+    \textit{}}
+    \textbf{Additional Certifications}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Digital Twin Technology: Concepts and Applications - Mahara-tech
+        \item Fundamentals of Deep Learning – NVIDIA
+        \item Spring Boot 2.0 Essential Training – LinkedIn Learning
+        \item Docker from Zero to Hero – Udemy
+        \item Student API Fundamentals – Microsoft Learn
+        \item Digital Transformation Consultant Program – GIZ Algeria
+    \end{highlights}
+\end{onecolentry}
+
+\section{Recommendations}
+
+\begin{twocolentry}{
+    \textit{Academic Reference}}
+    \textbf{Prof. Kahloul Laid}
+    
+    \textit{Academic Professor during undergraduate studies - Quality assurance Cell head, University of Biskra}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Provided a 2-year assignment letter supporting my role in the university’s Quality Assurance Program
+        \item Email: \href{mailto:kahloul.laid@example.edu}{l.kahloul@univ-biskra.dz}
+        \item Letter (French): \href{https://drive.google.com/drive/u/0/folders/1c4Ir-YR1PDycAvle480V_S6aWhYIowHr}{Google Drive}
+        \item Assignment letter (French): \href{https://drive.google.com/file/d/1l2ttOWNcUNGIsGYwFtOykfdDQigjMvBm/view?usp=sharing}{Google Drive}
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{
+    \textit{Academic Reference}}
+    \textbf{Mr. Ramdhani}
+    
+    \textit{Graduation project supervisor and teacher,  – University of Biskra}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Supervisor during backend system development for Biskra nadifa
+        \item Can attest to my leadership, team coordination, and backend skills
+        \item Email: \href{mailto:ramdhani@example.com}{mohamed.ramdani@univ-biskra.dz}
+        \item Letter: \href{https://drive.google.com/file/d/1tZtOGG5Xhnyz7CbVRTDBr7Lwauz9Mgk-/view?usp=sharing}{Google Drive}
+    \end{highlights}
+\end{onecolentry}
+
+
+
+
+
+
+    
+    \section{Technical Skills}
+
+\begin{onecolentry}
+    \textbf{Languages:} Java, Python, C, JavaScript, TypeScript
+\end{onecolentry}
+
+\begin{onecolentry}
+    \textbf{Frameworks:} Spring Boot, Express.js, JavaFX, Android SDK
+\end{onecolentry}
+
+\begin{onecolentry}
+    \textbf{Databases:} MySQL, PostgreSQL, Redis
+\end{onecolentry}
+
+\begin{onecolentry}
+    \textbf{Tools:} IntelliJ IDEA, Android Studio, Git, Docker, MySQL Workbench
+\end{onecolentry}
+
+\begin{onecolentry}
+    \textbf{Cloud platforms:} Render, Aiven, DigitalOcean
+\end{onecolentry}
+
+\begin{onecolentry}
+    \textbf{Concepts:} REST APIs, HATEOAS, Spring Security, AOP, CI/CD, UML, BPMN
+\end{onecolentry}
+
+\begin{onecolentry}
+    \textbf{Others:} Swagger/OpenAPI, Power BI, CAFYB CRM, Camunda
+\end{onecolentry}
+}
+
+\section{Languages}
+
+\begin{onecolentry}
+    \textbf{Arabic:} Native \\
+    \textbf{English:} C1 – CEIL Certified \\
+    \textbf{French:} B2 – TCF Certified \\
+    \textbf{German:} A2 (Active learning ) \\
+\end{onecolentry}
+    
+
+\end{document}

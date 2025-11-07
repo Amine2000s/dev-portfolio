@@ -1,0 +1,110 @@
+{
+  "navbar": {
+    "about": "À propos",
+    "projects": "Projets",
+    "skills": "Compétences",
+    "experience": "Expérience",
+    "education": "Formation",
+    "contact": "Contact"
+  },
+  "about": {
+    "viewResume": "Voir mon CV",
+    "tags": [
+      "Ingénieur Logiciel",
+      "Devops",
+      "NetDevops",
+      "Créateur de Solutions"
+    ],
+    "description": "Ingénieur Logiciel et DevOps passionné, spécialisé dans la livraison de solutions efficaces, fiables et évolutives. 🌱 Toujours en apprentissage — enthousiaste à l'idée d'explorer de nouvelles technologies, frameworks et moyens d'automatiser plus intelligemment."
+  },
+  "projects": {
+    "title": "Mes Projets",
+    "description": "Découvrez mes projets créatifs et innovants, du design au développement, et voyez comment je peux apporter de la valeur à votre prochain projet",
+    "liveDemo": "Démo en direct",
+    "github": "GitHub",
+    "items": [
+      {
+        "title": "Shortify – Raccourcisseur d'URL personnalisé avec Analytics de Visites",
+        "description": "Shortify est un raccourcisseur d'URL en cours de développement construit avec Spring MVC et Thymeleaf, conçu pour aller au-delà de la simple redirection en capturant des analytics de visites significatives. L'application démontre un savoir-faire backend, une conception modulaire et une préparation au déploiement en conditions réelles."
+      },
+      {
+        "title": "DIGIQA – Plateforme d'Assurance Qualité Numérique",
+        "description": "DIGIQA est une application web full-stack développée en collaboration avec la Cellule d'Assurance Qualité de l'Université Mohamed Khider de Biskra. Elle vise à numériser les processus d'assurance qualité alignés sur le RNAQES (Référentiel National d'Assurance Qualité de l'Enseignement Supérieur), la référence nationale algérienne pour l'assurance qualité dans l'enseignement supérieur."
+      },
+      {
+        "title": "♻️ Biskra Nadifa – Système Intelligent de Gestion des Déchets pour Biskra",
+        "description": "Biskra Nadifa (Arabe : \"Une Biskra Propre\") est une plateforme de gestion des déchets conçue pour résoudre le problème croissant des déchets non gérés dans la ville de Biskra, en Algérie. Elle facilite la coordination numérique entre les citoyens, les agents de nettoyage (chauffeurs) et les administrateurs du système pour assurer un assainissement urbain réactif et efficace."
+      },
+      {
+        "title": "Unité de Contrôle Kcube",
+        "description": "Une Unité de Contrôle d'un Prototype de Robot de Livraison 'KCube' réalisé à l'Université de Biskra, l'application se connecte avec la carte bluetooth Arduino interne HC05 via des sockets bluetooth"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Mes Compétences",
+    "description": "Ma boîte à outils technique comprend ces compétences. N'hésitez pas à personnaliser cette section !"
+  },
+  "experience": {
+    "title": "Mon Expérience",
+    "items": [
+      {
+        "title": "Ingénieur DevOps / NetDevOps",
+        "company": "Infraxcode – Temps plein",
+        "period": "Oct 2025 – Présent",
+        "description": "🔧 INFRASTRUCTURE & AUTOMATISATION\n• Maintenir et améliorer l'infrastructure sur site avec focus sur l'automatisation, la scalabilité et la fiabilité\n• Développer des scripts d'automatisation (Python, Bash) pour le provisionnement, la surveillance et les opérations réseau\n• Rationaliser les opérations via déploiement automatisé et gestion de configuration\n\n☁️ CLOUD & CI/CD\n• Prototyper et gérer des environnements basés sur AWS pour les tests et les déploiements de preuve de concept\n• Construire et améliorer les pipelines CI/CD avec GitLab CI pour accélérer les cycles de développement\n• Implémenter des pratiques infrastructure-as-code pour des déploiements cohérents\n\n🤝 COLLABORATION\n• Collaborer entre équipes pour intégrer les pratiques NetDevOps dans les workflows DevOps\n• Relier l'automatisation réseau et les processus DevOps pour une efficacité accrue"
+      },
+      {
+        "title": "Consultant Junior en Transformation Digitale",
+        "company": "GIZ – Deutsche Gesellschaft für Internationale Zusammenarbeit",
+        "period": "Temps partiel · 2024 – 2025",
+        "description": "💼 SUPPORT CLIENT\n• Accompagnement de plusieurs PME algériennes dans leurs initiatives de transformation digitale\n• Réalisation d'évaluations complètes des besoins et conseil sur les outils numériques, services cloud et automatisation\n• Livraison de recommandations personnalisées pour l'adoption technologique et l'optimisation des processus\n\n📊 STRATÉGIE & PLANIFICATION\n• Collaboration avec des équipes pluridisciplinaires pour concevoir des feuilles de route de modernisation IT\n• Création de plans stratégiques alignant les objectifs business avec les solutions technologiques\n\n🌱 ENGAGEMENT COMMUNAUTAIRE\n• Contribution à des ateliers promouvant la littératie numérique et l'intégration durable de la technologie\n• Facilitation de sessions de transfert de connaissances pour les parties prenantes PME"
+      },
+      {
+        "title": "Développeur Back-End & Chef d'Équipe",
+        "company": "Cellule Qualité – Université de Biskra",
+        "period": "Jan 2025 – Avril 2025",
+        "description": "🏗️ ARCHITECTURE & DÉVELOPPEMENT\n• Architecture d'un backend Spring Boot en couches pour système de gestion de la qualité\n• Développement d'API REST sécurisées et conformes HATEOAS avec contrôle d'accès basé sur les rôles (Spring Security)\n• Conception d'une architecture système évolutive supportant plusieurs utilisateurs simultanés\n\n⚡ PERFORMANCE & MONITORING\n• Intégration de la compression GZIP, Spring AOP et limitation du débit pour optimisation des performances\n• Implémentation d'un logging asynchrone centralisé avec MDC pour traçabilité avancée\n• Réduction des temps de réponse API de 40% grâce aux techniques d'optimisation\n\n👥 LEADERSHIP\n• Direction d'une équipe agile de 5+ développeurs avec sprints hebdomadaires et standups quotidiens\n• Établissement de standards de documentation technique et processus de revue de code\n• Mentorat de développeurs juniors et facilitation de sessions de partage de connaissances\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🛠️ Tech Stack: Java 17 • Spring Boot • Spring Security • MySQL • Docker • Maven • Git • Swagger"
+      },
+      {
+        "title": "Développeur Back-End",
+        "company": "Algerian Tech Makers",
+        "period": "Jul 2024 – Nov 2024",
+        "description": "💻 DÉVELOPPEMENT\n• Contribution au développement d'une plateforme RH interne avec focus sur la scalabilité\n• Conception de schémas de bases de données relationnelles optimisés pour une gestion efficace des données\n• Sécurisation d'API REST avec authentification par token et implémentation des meilleures pratiques de sécurité\n• Collaboration avec l'équipe frontend pour assurer une intégration API transparente\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🛠️ Tech Stack: TypeScript • Express.js • PostgreSQL"
+      },
+      {
+        "title": "Microsoft Learn Student Ambassador – Rang Beta",
+        "company": "Microsoft Learn",
+        "period": "Avr 2023 – Jul 2024",
+        "description": "🎓 ATELIERS & COMMUNAUTÉ\n• Animation de plusieurs ateliers Git et GitHub pour développeurs étudiants\n• Promotion des meilleures pratiques de collaboration et engagement communautaire développeur\n• Création de contenu éducatif et exercices pratiques pour les participants aux ateliers\n• Construction d'une communauté de 100+ apprenants et contributeurs actifs"
+      },
+      {
+        "title": "Membre Fondateur – Club Scientifique Debug",
+        "company": "Université de Biskra",
+        "period": "Sep 2022 – Jul 2024",
+        "description": "🚀 FONDATION & LEADERSHIP\n• Co-fondation d'un club technologique dirigé par les étudiants, axé sur l'apprentissage par les pairs et la culture de la programmation\n• Croissance de la participation du club de 0 à plus de 80 membres actifs grâce à une coordination stratégique\n• Établissement de la structure du club, gouvernance et partenariat avec le département d'informatique\n• Direction d'une équipe exécutive de 8 membres dans l'organisation des activités du club\n\n🎯 ÉVÉNEMENTS & MENTORAT\n• Organisation de 20+ ateliers de codage, panels de conférenciers invités et présentations de projets logiciels\n• Mentorat de 30+ étudiants de première année et encadrement de 15+ mini-projets de groupe\n• Coordination de compétitions tech inter-universitaires et hackathons\n• Facilitation de sessions d'apprentissage peer-to-peer et ateliers de revue de code"
+      }
+    ]
+  },
+  "education": {
+    "title": "Ma Formation",
+    "items": [
+      {
+        "title": "Licence en Informatique – Systèmes Informatiques",
+        "institution": "Université de Biskra",
+        "period": "Sep 2021 – Jul 2024",
+        "description": "• Cours couvrant les sujets clés: algorithmes, structures de données, systèmes d'exploitation, compilateurs, cybersécurité, réseaux, IA, développement mobile et web\n• Concentration sur l'architecture des systèmes et le développement backend avec cours en Java, systèmes de bases de données et modélisation UML\n• Bénévolat au Symposium International sur les Nouvelles Technologies de l'Information et de la Communication (ISNIB)\n• Participation aux clubs technologiques étudiants et soutien à la sensibilisation académique"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "description": "Je suis toujours ouvert aux nouvelles opportunités et collaborations. N'hésitez pas à me contacter par l'un de ces canaux.",
+    "email": "E-mail",
+    "phone": "Téléphone et WhatsApp",
+    "location": "Localisation",
+    "availableForRemote": "Disponible pour le travail à distance dans le monde entier",
+    "lookingForward": "J'ai hâte de vous entendre !",
+    "lookingForwardDescription": "Que vous ayez un projet en tête, une opportunité d'emploi ou que vous souhaitiez simplement dire bonjour, n'hésitez pas à me contacter. Je réponds généralement dans les 24 heures."
+  }
+}

@@ -1,0 +1,709 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=2 cm, % seperation between body and page edge from the left
+    right=2 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 79, 144} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={CHABI Amine sif eddine  CV},
+    pdfauthor={CHABI Amine sif eddine},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    % \usepackage[T1]{fontenc} % this breaks sb2nov
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0cm} % set column seperation
+\makeatletter
+\let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+\patchcmd{\ps@customFooterStyle}{\thepage}{
+    \color{gray}\textit{\small CHABI Amine sif eddine - Page \thepage{} sur \pageref*{LastPage}}
+}{}{} % replace number by desired string
+\makeatother
+\pagestyle{customFooterStyle}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+\renewcommand\labelitemi{$\circ$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{Dernière mise à jour en juillet 2025}\hspace{\widthof{Dernière mise à jour en juillet 2025}}
+    }}}%
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    \placelastupdatedtext
+    \begin{header}
+    \textbf{\fontsize{24 pt}{24 pt}\selectfont Amine Sif Eddine Chabi}
+
+    \vspace{0.3 cm}
+
+    \normalsize
+    \mbox{{\color{black}\footnotesize\faMapMarker*}\hspace*{0.13cm}Algérie – Ouvert à la mobilité}%
+    \kern 0.25 cm%
+    \AND%
+    \mbox{\hrefWithoutArrow{mailto:chabiaminesifeddine@gmail.com}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}chabiaminesifeddine@gmail.com}}%
+    \kern 0.25 cm%
+    \AND%
+    \mbox{\hrefWithoutArrow{tel:+213777157757}{\color{black}{\footnotesize\faPhone*}\hspace*{0.13cm}+213 7 77 15 77 57}}%
+    \kern 0.25 cm%
+    \AND%
+    \mbox{\hrefWithoutArrow{https://amine2000s.github.io/personal-website/}{\color{black}{\footnotesize\faLink}\hspace*{0.13cm}amine2000s.github.io}}%
+    \kern 0.25 cm%
+    \AND%
+    \mbox{\hrefWithoutArrow{https://linkedin.com/in/amine-chabi-a90b7822a}{\color{black}{\footnotesize\faLinkedinIn}\hspace*{0.13cm}amine-chabi-a90b7822a}}%
+    \kern 0.25 cm%
+    \AND%
+    \mbox{\hrefWithoutArrow{https://github.com/Amine2000s}{\color{black}{\footnotesize\faGithub}\hspace*{0.13cm}Amine2000s}}%
+\end{header}
+
+    \vspace{0.3 cm - 0.3 cm}
+
+
+    \section{Profil}
+
+\begin{onecolentry}
+Ingénieur DevOps avec une approche d'ingénierie logicielle, alliant expérience en développement backend et expertise en automatisation d'infrastructure. Maîtrise de Docker, CI/CD et déploiements sur VPS, avec une expérience pratique en Spring Boot, Express.js, MySQL, Redis et scripts Python. Passionné par la construction de systèmes évolutifs et fiables grâce à l'automatisation et aux opérations pilotées par le code.\end{onecolentry}
+
+
+    
+    %\section{Quick Guide}
+
+    %\begin{onecolentry}
+     %   \begin{highlightsforbulletentries}
+
+
+      %  \item Each section title is arbitrary and each section contains a list of entries.
+
+       % \item There are 7 unique entry types: \textit{BulletEntry}, \textit{TextEntry}, \textit{EducationEntry}, \textit{ExperienceEntry}, \textit{NormalEntry}, \textit{PublicationEntry}, and \textit{OneLineEntry}.
+
+        %\item Select a section title, pick an entry type, and start writing your section!
+
+        %\item \href{https://docs.rendercv.com/user_guide/}{Here}, you can find a comprehensive user guide for RenderCV.
+
+
+        %\end{highlightsforbulletentries}
+    %\end{onecolentry}
+
+    \section{Formation}
+
+\begin{twocolentry}{
+    \textit{Sep 2021 – Jul 2024}}
+    \textbf{Université de Biskra}
+
+    \textit{Licence en Informatique – Systèmes Informatiques}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Formation couvrant les domaines clés : algorithmes, structures de données, systèmes d'exploitation, compilateurs, logique, algèbre, cybersécurité, réseaux, intelligence artificielle, développement mobile et web
+        \item Bénévolat au Symposium International sur les Nouvelles Technologies de l'Information et de la Communication (ISNIB), contribution à la logistique événementielle et à la coordination académique
+        \item Participation aux clubs technologiques étudiants et soutien aux activités de sensibilisation académique aux côtés du département d'informatique
+        \item Focus sur l'architecture système et le développement backend
+        \item Cours incluant le développement Java, les systèmes de bases de données, la modélisation UML
+
+    \end{highlights}
+\end{onecolentry}
+
+\section{Expérience}
+
+\begin{twocolentry}{
+    \textit{Oct 2025 – Présent}}
+    \textbf{Ingénieur DevOps / NetDevOps}
+    
+    \textit{Infraxcode – Temps plein}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Maintenance et amélioration de l'infrastructure sur site, en se concentrant sur l'automatisation, la scalabilité et la fiabilité
+        \item Prototypage et gestion d'environnements basés sur AWS pour les tests et les déploiements de preuve de concept
+        \item Développement de scripts d'automatisation (Python, Bash) pour rationaliser le provisionnement, la surveillance et les opérations réseau
+        \item Construction et amélioration des pipelines CI/CD utilisant GitLab CI pour soutenir les workflows de développement et de déploiement
+        \item Collaboration inter-équipes pour intégrer les pratiques d'automatisation réseau (NetDevOps) dans les processus DevOps
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{
+    \textit{Temps partiel · Août 2025 – Présent}}
+    \textbf{Consultant Junior en Transformation Digitale}
+    
+    \textit{GIZ – Deutsche Gesellschaft für Internationale Zusammenarbeit}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Accompagnement des petites et moyennes entreprises (PME) algériennes dans leurs initiatives de transformation digitale
+        \item Réalisation d'évaluations des besoins et conseil sur l'adoption d'outils numériques, de services cloud et d'automatisation des processus
+        \item Collaboration avec des équipes pluridisciplinaires pour concevoir des feuilles de route pour la modernisation IT et l'optimisation des processus
+        \item Contribution à des ateliers promouvant la littératie numérique et l'intégration durable de la technologie pour les PME
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+
+\begin{twocolentry}{
+    \textit{Biskra, Algérie}    
+        
+    \textit{Jan 2025 – Avril 2025}}
+    \textbf{Développeur Back-End \& Chef d'Équipe}
+    
+    \textit{Cellule Qualité – Université de Biskra}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Architecture d'un backend Spring Boot en couches pour un système de gestion de la qualité
+        \item Développement d'API REST sécurisées et conformes HATEOAS avec contrôle d'accès basé sur les rôles utilisant Spring Security
+        \item Intégration de la compression GZIP, Spring AOP et limitation du débit pour optimiser les performances
+        \item Implémentation d'un logging asynchrone centralisé avec MDC pour une traçabilité avancée
+        \item Direction d'une équipe agile, définition de sprints hebdomadaires, suivi des tâches quotidiennes et rédaction de documentation technique
+        \item \textbf{Technologies:} Java 17, Spring Boot, Spring Security, MySQL, Docker, Maven, Git, Swagger
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{
+    \textit{Distanciel / Algérie}    
+        
+    \textit{Jul 2024 – Nov 2024}}
+    \textbf{Développeur Back-End}
+    
+    \textit{Algerian Tech Makers}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Contribution au développement d'une plateforme RH interne
+        \item Conception de schémas de bases de données relationnelles et sécurisation d'API REST utilisant l'authentification par token
+        \item \textbf{Technologies:} TypeScript, Express.js, PostgreSQL
+    \end{highlights}
+\end{onecolentry}
+
+
+
+
+    
+ 
+
+
+
+
+    
+    %\section{Publications}
+
+
+
+        
+        %\begin{samepage}
+        %    \begin{twocolentry}{
+        %        Jan 2004
+        %    }
+        %        \textbf{3D Finite Element Analysis of No-Insulation Coils}
+
+         %       \vspace{0.10 cm}
+%
+         %       \mbox{Frodo Baggins}, \mbox{\textbf{\textit{John Doe}}}, \mbox{Samwise Gamgee}
+        %    \end{twocolentry}
+
+
+       %     \vspace{0.10 cm}
+%
+       %     \begin{onecolentry}
+       % \href{https://doi.org/10.1109/TASC.2023.3340648}{10.1109/TASC.2023.3340648}
+      %      \end{onecolentry}
+    %    \end{samepage}
+
+\section{Leadership et Implication Communautaire}
+
+\begin{twocolentry}{
+    \textit{Avr 2023 – Jul 2024}}
+    \textbf{Microsoft Learn Student Ambassador – Rang Beta}
+    
+    \textit{Microsoft Learn}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Animation d'ateliers sur Git et GitHub et promotion des meilleures pratiques de collaboration
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{
+    \textit{Sep 2022 – Jul 2024}}
+    \textbf{Membre Fondateur – Club Scientifique Debug}
+    
+    \textit{Université de Biskra}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Co-fondation d'un club technologique dirigé par les étudiants, axé sur l'apprentissage par les pairs, la culture de la programmation et la collaboration interdisciplinaire
+        \item Organisation d'événements réguliers incluant des ateliers de codage, des panels de conférenciers invités et des présentations de projets logiciels
+        \item Accompagnement des étudiants de première année avec du mentorat académique et encadrement de mini-projets de groupe
+        \item Coordination de la communication avec le département d'informatique et contribution à la croissance de la participation du club à plus de 80 membres actifs
+    \end{highlights}
+\end{onecolentry}
+
+    
+ \section{Projets}
+ 
+\begin{twocolentry}{
+    \textit{}}
+    \textbf{Scraper Web MaharaTech}
+    \textit{\href{https://amine2000s.github.io/personal-website/blog/bac-web-scraper/}{\texttt{Lire l'article}}}}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+
+\begin{onecolentry}
+    \begin{highlights}
+        \item Développement d'un scraper basé sur Python pour préserver le contenu des cours MaharaTech pendant une coupure internet nationale
+        \item Utilisation de Playwright pour l'automatisation de navigateur headless et contournement de connexion via cookies de session
+        \item Exploration du DOM pour extraire la structure des cours, liens YouTube intégrés dans des iframes dynamiques
+        \item Parsing et sauvegarde des leçons, liens vidéo et métadonnées pour un accès hors ligne
+        \item Technologies: Python, Playwright, BeautifulSoup, HTML/JS, Injection de Cookies
+    \end{highlights}
+\end{onecolentry}
+  %\  \begin{twocolentry}{
+    %\\textit{In Progress}}
+    %\\textbf{SAP BTP App for User Provisioning}
+%\\end{twocolentry}
+%\
+%\\vspace{0.10 cm}
+%\\begin{onecolentry}
+    %\\begin{highlights}
+        %\\item Built a secure Java-based app for provisioning user %\identities via SAP IAS/IPS
+        %\\item Integrated with SAP BTP using XSUAA and OAuth2 for %\secure service access
+        %\\item Demonstrated full user lifecycle flow: creation, %\update, and deprovisioning
+        %\\item \textbf{Concepts:} Identity Access Mgmt, SAP Cloud %\Security, User Federation
+ %\   \end{highlights}
+%\\end{onecolentry}
+%\\vspace{0.10 cm}
+%\
+\vspace{0.10 cm}
+
+%\\begin{twocolentry}{
+  %\  \textit{In Progress}}
+    %\\textbf{Vehicle Order Tracking Microservice via S/4HANA}
+%\\end{twocolentry}
+%\\vspace{0.10 cm}
+
+%\\vspace{0.10 cm}
+%\\begin{onecolentry}
+  %\  \begin{highlights}
+    %\    \item Developed a Java microservice consuming SAP S/4HANA APIs for tracking vehicle order statuses
+      %\  \item Connected via SAP API Hub and implemented OAuth2-secured data flow
+        %\\item Simulated logistics integration for vehicle production visibility
+        %\\item \textbf{Concepts:} SAP OData, S/4HANA Logistics, Java Integration, OAuth2
+    %\\end{highlights}
+%\\end{onecolentry}
+%\\vspace{0.10 cm}
+
+
+
+
+ 
+\vspace{0.10 cm}
+\begin{twocolentry}{
+    \textit{}}
+    \textbf{Shortify – Raccourcisseur d'URL}
+    \textit{\href{https://shortify-url-shortner-584s.onrender.com}{\texttt{shortify.onrender.com}}}}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Développement d'une application Spring Boot en couches pour le raccourcissement d'URL avec tableau de bord d'analytique
+        \item Dockerisation et déploiement sur Render (\faExclamationTriangle\ peut avoir un délai de démarrage dû à l'hébergement gratuit)
+        \item Base de données MySQL hébergée sur Aiven.io
+        \item Technologies: Java, Spring Boot, Thymeleaf, Docker, MySQL
+    \end{highlights}
+\end{onecolentry}
+
+
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{
+    \textit{Proposition GSoC}}
+    \textbf{Diomede – Plateforme d'Imagerie Médicale}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Proposition et prototypage d'une plateforme d'albums DICOM avec accès sécurisé aux images et outils de métadonnées
+        \item Construction d'un PoC JavaFX et initiation d'une réécriture full-stack utilisant Spring Boot et React
+        \item \textbf{Technologies:} Spring Boot, MongoDB, React, JavaFX, Docker, Keycloak, DICOM
+        \item \href{https://github.com/Amine2000s/dicom-albums-manager}{Dépôt GitHub}
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{
+    \textit{Biskra, Algérie}}
+    \textbf{Système de Gestion des Déchets – Biskra Nadifa}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Conception d'un système backend RESTful pour coordonner la collecte des déchets municipaux et la répartition des conducteurs
+        \item Développement de schémas de bases de données optimisés et logique de service pour le suivi des tâches en temps réel
+        \item \textbf{Technologies:} Java, Spring Boot, MySQL
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{
+    \textit{Projet GitHub}}
+    \textbf{Application de Prévisions Météorologiques avec Cache Redis}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Développement d'une application Node.js Express pour afficher les prévisions météorologiques avec recherche dynamique
+        \item Utilisation de Redis pour mettre en cache les appels API et réduire la charge sur le fournisseur de services météorologiques
+        \item \textbf{Technologies:} Node.js, Express.js, Redis, API OpenWeatherMap
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{
+    \textit{2023 – Université de Biskra}}
+    \textbf{KCube – Contrôleur Android pour Robot de Livraison}
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Développement d'une application mobile pour contrôler un robot Arduino compatible Bluetooth (HC-05)
+        \item Intégration du mouvement directionnel, déverrouillage du couvercle et suivi en temps réel basé sur une carte
+        \item \textbf{Tech:} Android SDK, Java, API Google Maps, Sockets Bluetooth, Arduino
+        \item GitHub: \href{https://github.com/Amine2000s/KCube-Controller-App}{github.com/Amine2000s/KCube-Controller-App}
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{
+    \textit{Travail universitaire}}
+    \textbf{Application Bureau de Gestion de Tâches}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Développement d'un gestionnaire de tâches basé sur JavaFX avec stockage persistant MySQL
+        \item Implémentation de fonctionnalités telles que les alertes d'échéance et les opérations CRUD avec structure MVC
+        \item \textbf{Technologies:} Java, JavaFX, MySQL
+    \end{highlights}
+\end{onecolentry}
+
+
+\section{Contributions Open Source}
+
+\begin{twocolentry}{
+    \textit{Social Winter of Code 2022}}
+    \textbf{Mingler – Plateforme de Réseaux Sociaux}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Amélioration de l'expérience utilisateur en ajoutant une modale de confirmation de déconnexion et correction de la réactivité de la mise en page
+        \item Reproduction et documentation claire des problèmes, conduisant à des corrections rapides par les mainteneurs
+        \item Participation aux revues de PR, ouverture d'issues et contribution active aux discussions communautaires
+        \item \textbf{Technologies:} PHP, JavaScript, Bootstrap
+        \item \href{https://github.com/yourusername/mingler}{Dépôt GitHub}
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{
+    \textit{Proposition Google Summer of Code}}
+    \textbf{Diomede – Plateforme d'Imagerie Médicale}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Proposition d'améliorations architecturales et logique d'extraction de métadonnées DICOM
+        \item Réorganisation de la structure du dépôt et amélioration de la documentation pour les contributeurs
+        \item Fourniture de conseils dans les discussions d'issues et contribution de pull requests au dépôt principal
+        \item \textbf{Technologies:} JavaFX, React, Spring Boot, MongoDB
+        \item \href{https://docs.google.com/document/d/1h_PNk40tztVvHmK8rwr_4W8jZD0EXsMA/edit?usp=sharing&ouid=103237394037038598452&rtpof=true&sd=true}{Proposition GSoC}
+    \end{highlights}
+\end{onecolentry}
+
+\section{Certifications et Formation}
+
+\begin{twocolentry}{
+    \textit{Fév 2025 – Mai 2025}}
+    \textbf{Programme GIZ – Transformation Digitale et Verte}
+    
+    \textit{GIZ Algérie (Deutsche Gesellschaft für Internationale Zusammenarbeit)}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Sélectionné parmi les meilleurs candidats nationaux pour rejoindre ce programme de formation compétitif et à fort impact
+        \item GIZ est l'agence allemande de développement international promouvant la réforme économique et digitale durable dans le monde entier
+        \item Parcours certifié complété, qualifiant pour le rôle de Consultant Junior en Transformation Digitale
+        \item Expérience pratique acquise dans:
+        \begin{itemize}
+            \item Gestion des Processus Métier (BPM) avec Camunda
+            \item Simulation CRM via la plateforme CAFYB
+            \item Analyse de données et création de tableaux de bord avec Microsoft Power BI
+        \end{itemize}
+        \item Score final: 76,78/100 — classé 3ème sur 30 participants
+    \end{highlights}
+\end{onecolentry}
+
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{
+    \textit{}}
+    \textbf{Certifications Supplémentaires}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Technologie du Jumeau Numérique : Concepts et Applications - Mahara-tech
+        \item Fondamentaux de l'Apprentissage Profond – NVIDIA
+        \item Spring Boot 2.0 Essential Training – LinkedIn Learning
+        \item Docker de Zéro à Héros – Udemy
+        \item Fondamentaux API Étudiant – Microsoft Learn
+        \item Programme Consultant en Transformation Digitale – GIZ Algérie
+    \end{highlights}
+\end{onecolentry}
+
+\section{Recommandations}
+
+\begin{twocolentry}{
+    \textit{Référence Académique}}
+    \textbf{Prof. Kahloul Laid}
+    
+    \textit{Professeur académique pendant les études de licence - Chef de la Cellule d'assurance qualité, Université de Biskra}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Fourni une lettre d'affectation de 2 ans soutenant mon rôle dans le Programme d'Assurance Qualité de l'université
+        \item Email: \href{mailto:kahloul.laid@example.edu}{l.kahloul@univ-biskra.dz}
+        \item Lettre (Français): \href{https://drive.google.com/drive/u/0/folders/1c4Ir-YR1PDycAvle480V_S6aWhYIowHr}{Google Drive}
+        \item Lettre d'affectation (Français): \href{https://drive.google.com/file/d/1l2ttOWNcUNGIsGYwFtOykfdDQigjMvBm/view?usp=sharing}{Google Drive}
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{
+    \textit{Référence Académique}}
+    \textbf{M. Ramdhani}
+    
+    \textit{Superviseur du projet de fin d'études et enseignant – Université de Biskra}
+\end{twocolentry}
+
+\vspace{0.10 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Superviseur pendant le développement du système backend pour Biskra nadifa
+        \item Peut attester de mon leadership, coordination d'équipe et compétences backend
+        \item Email: \href{mailto:ramdhani@example.com}{mohamed.ramdani@univ-biskra.dz}
+        \item Lettre: \href{https://drive.google.com/file/d/1tZtOGG5Xhnyz7CbVRTDBr7Lwauz9Mgk-/view?usp=sharing}{Google Drive}
+    \end{highlights}
+\end{onecolentry}
+
+
+
+
+
+    
+    \section{Compétences Techniques}
+
+\begin{onecolentry}
+    \textbf{Langages:} Java, Python, C, JavaScript, TypeScript
+\end{onecolentry}
+
+\begin{onecolentry}
+    \textbf{Frameworks:} Spring Boot, Express.js, JavaFX, Android SDK
+\end{onecolentry}
+
+\begin{onecolentry}
+    \textbf{Bases de données:} MySQL, PostgreSQL, Redis
+\end{onecolentry}
+
+\begin{onecolentry}
+    \textbf{Outils:} IntelliJ IDEA, Android Studio, Git, Docker, MySQL Workbench
+\end{onecolentry}
+
+\begin{onecolentry}
+    \textbf{Plateformes cloud:} Render, Aiven, DigitalOcean
+\end{onecolentry}
+
+\begin{onecolentry}
+    \textbf{Concepts:} API REST, HATEOAS, Spring Security, AOP, CI/CD, UML, BPMN
+\end{onecolentry}
+
+\begin{onecolentry}
+    \textbf{Autres:} Swagger/OpenAPI, Power BI, CAFYB CRM, Camunda
+\end{onecolentry}
+
+\section{Langues}
+
+\begin{onecolentry}
+    \textbf{Arabe:} Langue maternelle \\
+    \textbf{Anglais:} C1 – Certifié CEIL \\
+    \textbf{Français:} B2 – Certifié TCF \\
+    \textbf{Allemand:} A2 (Apprentissage actif) \\
+\end{onecolentry}
+    
+
+\end{document}
+

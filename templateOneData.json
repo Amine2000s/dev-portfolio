@@ -1,0 +1,292 @@
+{
+  "NavBar": {
+    "about": true,
+    "projects": true,
+    "skills": true,
+    "experience": true,
+    "education": true,
+    "contact": true
+  },
+  "About": {
+    "name": {
+      "content": "CHABI Amine Sif eddine",
+      "gradient": "linear-gradient(90deg, #2A7B9B, #57C785)"
+    },
+    "imgUrl": "https://i.ibb.co/272vSJqH/photo-2025-11-07-15-19-29.jpg",
+    "availability": true,
+    "tags": [
+      "Software Engineer",
+      "Devops",
+      "NetDevops",
+      "Solutions Builder"
+    ],
+    "resumeButton": {
+      "resumeLink": "https://drive.google.com/file/d/1nJ23OqG2F7hrFOo2lzEcmT_ENOQkNy4e/view?usp=sharing",
+      "resumeGradient": "linear-gradient(90deg, #2A7B9B, #57C785)",
+      "resumeOriginalGradient": "linear-gradient(90deg, #2A7B9B, #57C785)",
+      "resumeColor1": "#2A7B9B",
+      "resumeColor2": "#57C785"
+    },
+    "links": [
+      {
+        "id": "github",
+        "link": "https://github.com/Amine2000s",
+        "preview": true
+      },
+      {
+        "id": "linkedin",
+        "link": "https://www.linkedin.com/in/amine-chabi-a90b7822a/",
+        "preview": true
+      },
+      {
+        "id": "codeforces",
+        "link": "https://codeforces.com/profile/Youssif_Hassan",
+        "preview": true
+      },
+      {
+        "id": "x",
+        "link": "#",
+        "preview": false
+      }
+    ],
+    "description": {
+      "content": "A passionate Software and DevOps Engineer, specializing in delivering efficient, reliable, and scalable solutions. 🌱 Always learning — excited to explore new technologies, frameworks, and ways to automate smarter.",
+      "highlights": []
+    }
+  },
+  "Projects": {
+    "projects": [
+      {
+        "title": "Shortify – Custom URL Shortener with Visit Analytics",
+        "description": "Shortify is a work-in-progress URL shortener built using Spring MVC and Thymeleaf, designed to go beyond simple redirection by capturing meaningful visit analytics. The application demonstrates backend craftsmanship, modular design, and real-world deployment readiness.",
+        "tech": [
+          {
+            "name": "Spring MVC",
+            "color": "text-green-400"
+          },
+          {
+            "name": "Thymleaf",
+            "color": "text-yellow-400"
+          },
+          {
+            "name": "MySQL",
+            "color": "text-yellow-400"
+          }
+        ],
+        "imgSrc": "https://i.ibb.co/Q7bgBrqb/url-shortner.jpg",
+        "liveDemo": "https://amine2000s.github.io/personal-website/projects/url-shortner/",
+        "repo": "https://github.com/Amine2000s/Shortify-URL-Shortner"
+      },
+      {
+        "title": "DIGIQA – Digital Quality Assurance Platform",
+        "description": "DIGIQA is a full-stack web application developed in collaboration with the Quality Assurance Cell at Mohamed Khider University of Biskra. It aims to digitize quality assurance processes aligned with RNAQES (Référentiel National d’Assurance Qualité de l’Enseignement Supérieur), Algeria’s national reference for quality assurance in higher education.",
+        "tech": [
+          {
+            "name": "React",
+            "color": "text-blue-400"
+          },
+          {
+            "name": "Spring boot",
+            "color": "text-green-400"
+          },
+          {
+            "name": "MySQl",
+            "color": "text-green-400"
+          }
+        ],
+        "imgSrc": "https://i.ibb.co/qL9xxNj9/digiqa.jpg",
+        "liveDemo": "https://amine2000s.github.io/personal-website/projects/digiqa/",
+        "repo": ""
+      },
+      {
+        "title": "♻️ Biskra Nadifa – Smart Waste Management System for Biskra",
+        "description": "Algorithm Visualizer is a web-based application designed to help users understand and learn algorithms through interactive visualizations.",
+        "tech": [
+          {
+            "name": "React",
+            "color": "text-blue-400"
+          },
+          {
+            "name": "Spring boot",
+            "color": "text-green-400"
+          },
+          {
+            "name": "Java android",
+            "color": "text-green-400"
+          },
+          {
+            "name": "React-native",
+            "color": "text-blue-400"
+          },
+          {
+            "name": "MySQL",
+            "color": "text-orange-400"
+          }
+        ],
+        "imgSrc": "https://i.ibb.co/5hFdBHhP/biskra-nadifa-overview.png",
+        "liveDemo": "https://amine2000s.github.io/personal-website/projects/biskra-nadifa-1/",
+        "repo": ""
+      },
+      {
+        "title": "Kcube Controller Unit",
+        "description": "a Controller Unit of a Delivery Robot Prototype 'KCube' made in University of Biksra the application connect with the internal arduino bluetooth board HC05 through bluetooth sockets",
+        "tech": [],
+        "imgSrc": "https://i.ibb.co/cXkG3yqy/s4.jpg",
+        "liveDemo": "",
+        "repo": "https://github.com/Amine2000s/KcubeWirelessController"
+      }
+    ],
+    "title": "linear-gradient(90deg, #3b82f6, #a855f7, #9333ea)"
+  },
+  "Skills": {
+    "skills": [
+      {
+        "icon": "SiC",
+        "name": "C",
+        "color": "#A8B9CC"
+      },
+      {
+        "icon": "SiJava",
+        "name": "Java",
+        "color": "#ED8B00"
+      },
+      {
+        "icon": "SiHtml5",
+        "name": "HTML",
+        "color": "#E34F26"
+      },
+      {
+        "icon": "SiCss3",
+        "name": "CSS",
+        "color": "#1572B6"
+      },
+      {
+        "icon": "SiJavascript",
+        "name": "JavaScript",
+        "color": "#F7DF1E"
+      },
+      {
+        "icon": "SiPython",
+        "name": "Python",
+        "color": "#3776AB"
+      },
+      {
+        "icon": "SiSpring",
+        "name": "Spring",
+        "color": "#6DB33F"
+      },
+      {
+        "icon": "SiNodedotjs",
+        "name": "Node.js",
+        "color": "#339933"
+      },
+      {
+        "icon": "SiDocker",
+        "name": "Docker",
+        "color": "#2496ED"
+      },
+      {
+        "icon": "SiAmazon",
+        "name": "AWS",
+        "color": "#FF9900"
+      },
+      {
+        "icon": "SiWordpress",
+        "name": "WordPress",
+        "color": "#21759B"
+      },
+      {
+        "icon": "SiLinux",
+        "name": "Linux",
+        "color": "#FCC624"
+      },
+      {
+        "icon": "SiGnubash",
+        "name": "Bash",
+        "color": "#4EAA25"
+      }
+    ],
+    "title": "linear-gradient(90deg, #3b82f6, #a855f7, #9333ea)"
+  },
+  "Experiences": {
+    "experience": [
+      {
+        "title": "DevOps / NetDevOps Engineer",
+        "company": "Infraxcode – Full-time",
+        "period": "Oct 2025 – Present",
+        "description": "🔧 INFRASTRUCTURE & AUTOMATION\n• Maintain and enhance on-premise infrastructure with focus on automation, scalability, and reliability\n• Develop automation scripts (Python, Bash) for provisioning, monitoring, and network operations\n• Streamline operations through automated deployment and configuration management\n\n☁️ CLOUD & CI/CD\n• Prototype and manage AWS-based environments for testing and proof-of-concept deployments\n• Build and improve CI/CD pipelines using GitLab CI to accelerate development cycles\n• Implement infrastructure-as-code practices for consistent deployments\n\n🤝 COLLABORATION\n• Collaborate across teams to integrate NetDevOps practices into DevOps workflows\n• Bridge network automation and DevOps processes for enhanced efficiency",
+        "icon": "Programming",
+        "left": false,
+        "companyLogo": "https://media.licdn.com/dms/image/v2/D560BAQGEULlNP6Wq7Q/company-logo_200_200/company-logo_200_200/0/1732785462503/infraxcode_logo?e=2147483647&v=beta&t=0whts4tWL31EITnyP_uU5X9k9lx1S_3wJMjG1urIwP8"
+      },
+      {
+        "title": "Junior Digital Transformation Consultant",
+        "company": "GIZ – Deutsche Gesellschaft für Internationale Zusammenarbeit",
+        "period": "Part-time · 2024 – 2025",
+        "description": "💼 CLIENT SUPPORT\n• Supported multiple Algerian SMEs in digital transformation initiatives\n• Conducted comprehensive needs assessments and advised on digital tools, cloud services, and workflow automation\n• Delivered tailored recommendations for technology adoption and process optimization\n\n📊 STRATEGY & PLANNING\n• Collaborated with cross-functional teams to design IT modernization roadmaps\n• Created strategic plans aligning business objectives with technology solutions\n\n🌱 COMMUNITY ENGAGEMENT\n• Contributed to workshops promoting digital literacy and sustainable technology integration\n• Facilitated knowledge transfer sessions for SME stakeholders",
+        "icon": "Programming",
+        "left": true,
+        "companyLogo": "https://media.licdn.com/dms/image/v2/D4E0BAQF7T5J4tvHv9Q/company-logo_200_200/company-logo_200_200/0/1680428413603?e=2147483647&v=beta&t=3IUfh90INEZiJOrh4YSJaIHBYcnfJqIg1MbZuDM7baI"
+      },
+      {
+        "title": "Back-End Developer & Team Lead",
+        "company": "Quality Cell – University of Biskra",
+        "period": "Jan 2025 – April 2025",
+        "description": "🏗️ ARCHITECTURE & DEVELOPMENT\n• Architected layered Spring Boot backend for quality management system\n• Developed secure, HATEOAS-compliant REST APIs with role-based access (Spring Security)\n• Designed scalable system architecture supporting multiple concurrent users\n\n⚡ PERFORMANCE & MONITORING\n• Integrated GZIP compression, Spring AOP, and rate limiting for performance optimization\n• Implemented centralized asynchronous logging with MDC for advanced traceability\n• Reduced API response times by 40% through optimization techniques\n\n👥 LEADERSHIP\n• Led agile team of 5+ developers with weekly sprints and daily standups\n• Established technical documentation standards and code review processes\n• Mentored junior developers and facilitated knowledge sharing sessions\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🛠️ Tech Stack: Java 17 • Spring Boot • Spring Security • MySQL • Docker • Maven • Git • Swagger",
+        "icon": "Programming",
+        "left": false,
+        "companyLogo": "https://e7.pngegg.com/pngimages/950/371/png-clipart-university-of-biskra-university-of-bejaia-southern-oregon-university-university-of-bechar-others-text-logo.png"
+      },
+      {
+        "title": "Back-End Developer",
+        "company": "Algerian Tech Makers",
+        "period": "Jul 2024 – Nov 2024",
+        "description": "💻 DEVELOPMENT\n• Contributed to internal HR platform development with focus on scalability\n• Designed optimized relational database schemas for efficient data management\n• Secured REST APIs with token-based authentication and implemented security best practices\n• Collaborated with frontend team to ensure seamless API integration\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n🛠️ Tech Stack: TypeScript • Express.js • PostgreSQL",
+        "icon": "Programming",
+        "left": true,
+        "companyLogo": "https://media.licdn.com/dms/image/v2/D4E0BAQEn1jjp8uc9NA/company-logo_200_200/company-logo_200_200/0/1689004144142?e=2147483647&v=beta&t=jf5PP84Vzjt0QyVxcnsz712T-jcNs_hn6uQZPXIkTyo"
+      },
+      {
+        "title": "Microsoft Learn Student Ambassador – Beta Rank",
+        "company": "Microsoft Learn",
+        "period": "Apr 2023 – Jul 2024",
+        "description": "🎓 WORKSHOPS & COMMUNITY\n• Hosted multiple Git and GitHub workshops for student developers\n• Promoted collaboration best practices and developer community engagement\n• Created educational content and hands-on exercises for workshop participants\n• Built a community of 100+ active learners and contributors",
+        "icon": "GiGraduateCap",
+        "left": false,
+        "companyLogo": "https://media.licdn.com/dms/image/v2/C4D0BAQFa9jfMQE1StA/company-logo_200_200/company-logo_200_200/0/1630532584311?e=2147483647&v=beta&t=F7sjSR11g9yqXbPEvnkiUBbBPzpMgNXqbMIsOLjvyLQ"
+      },
+      {
+        "title": "Founding Member – Club Scientifique Debug",
+        "company": "University of Biskra",
+        "period": "Sep 2022 – Jul 2024",
+        "description": "🚀 FOUNDING & LEADERSHIP\n• Co-founded student-led tech club focused on peer learning and programming culture\n• Grew club participation from 0 to 80+ active members through strategic coordination\n• Established club structure, governance, and partnership with CS department\n• Led executive team of 8 members in organizing club activities\n\n🎯 EVENTS & MENTORSHIP\n• Organized 20+ coding workshops, guest speaker panels, and software project showcases\n• Mentored 30+ first-year students and guided 15+ group mini-projects\n• Coordinated inter-university tech competitions and hackathons\n• Facilitated peer-to-peer learning sessions and code review workshops",
+        "icon": "GiGraduateCap",
+        "left": true,
+        "companyLogo": "https://e7.pngegg.com/pngimages/950/371/png-clipart-university-of-biskra-university-of-bejaia-southern-oregon-university-university-of-bechar-others-text-logo.png"
+      }
+    ],
+    "title": "linear-gradient(90deg, #3b82f6, #a855f7, #9333ea)"
+  },
+  "Education": {
+    "education": [
+      {
+        "title": "Bachelor in Computer Science – Computer Systems",
+        "institution": "University of Biskra",
+        "period": "Sep 2021 – Jul 2024",
+        "description": "• Covered key subjects: algorithms, data structures, operating systems, compilers, cybersecurity, networking, AI, mobile and web development\n• Focused on system architecture and backend development with courses in Java, database systems, and UML modeling\n• Volunteered in ISNIB (International Symposium on New Information and Communication Technologies)\n• Participated in student tech clubs and supported academic outreach",
+        "icon": "Education",
+        "logoUrl": "https://e7.pngegg.com/pngimages/950/371/png-clipart-university-of-biskra-university-of-bejaia-southern-oregon-university-university-of-bechar-others-text-logo.png",
+        "left": false
+      }
+    ],
+    "title": "linear-gradient(90deg, #3b82f6, #a855f7, #9333ea)"
+  },
+  "Contact": {
+    "contact": {
+      "email": "chabiaminesifeddine@gmail.com",
+      "phone": "+213 7 77157757",
+      "location": "Algeria, Algiers"
+    },
+    "title": "linear-gradient(90deg, #3b82f6, #a855f7, #9333ea)"
+  }
+}
