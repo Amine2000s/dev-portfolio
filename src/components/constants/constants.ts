@@ -86,7 +86,7 @@ export const NavBarContent: string[] = [
   "Contact",
 ];
 interface SkillItem {
-  icon: string;
+  icon: IconType;
   name: string;
   color: string;
 }

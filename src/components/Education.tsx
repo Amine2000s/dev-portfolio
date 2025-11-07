@@ -20,26 +20,6 @@ const Education = () => {
     return <FaGraduationCap className="w-6 h-6" />;
   };
 
-  const getInstitutionLogo = (item: any) => {
-    // If logoUrl is provided and not empty, render image next to institution name
-    if (item.logoUrl && item.logoUrl.trim() !== "") {
-      return (
-        <img
-          src={item.logoUrl}
-          alt={`${item.institution} logo`}
-          className="w-6 h-6 object-contain"
-          style={{ maxWidth: '100%', maxHeight: '100%' }}
-          onError={(e) => {
-            // Hide image if it fails to load
-            const target = e.target as HTMLImageElement;
-            target.style.display = 'none';
-          }}
-        />
-      );
-    }
-    return null;
-  };
-
   return (
     <section
       id="education"
