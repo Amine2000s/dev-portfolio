@@ -7,7 +7,7 @@ import svgr from "vite-plugin-svgr";
 // IMPORTANT: Update the base path to match your GitHub repository name
 // If repo is at username.github.io/repo-name, use '/repo-name/'
 // If repo is at username.github.io (root), use '/'
-const REPO_NAME = 'Nouveau-dossier'; // ⚠️ CHANGE THIS to your actual repository name
+const REPO_NAME = 'dev-portfolio'; // Repository name: dev-portfolio
 
 export default defineConfig({
   plugins: [react(), tailwindcss(), svgr()],
