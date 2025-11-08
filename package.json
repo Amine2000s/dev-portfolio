@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --base /",
+    "dev:gh-pages": "vite",
     "build": "tsc -b && vite build",
     "build:gh-pages": "npm run build",
     "lint": "eslint .",

@@ -9,12 +9,13 @@ import svgr from "vite-plugin-svgr";
 // If repo is at username.github.io (root), use '/'
 const REPO_NAME = 'dev-portfolio'; // Repository name: dev-portfolio
 
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   plugins: [react(), tailwindcss(), svgr()],
-  // Use base path for production builds (GitHub Pages), root for development
-  base: mode === 'production' ? `/${REPO_NAME}/` : '/',
+  // Always use base path for GitHub Pages deployment
+  // For local development, use: npm run dev -- --base /
+  base: `/${REPO_NAME}/`,
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
   },
-}));
+});
