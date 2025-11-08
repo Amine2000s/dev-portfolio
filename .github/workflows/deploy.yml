@@ -37,6 +37,11 @@ jobs:
         env:
           NODE_ENV: production
 
+      - name: Ensure .nojekyll file exists
+        run: |
+          touch dist/.nojekyll
+          ls -la dist/ | head -20
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
