@@ -21,7 +21,11 @@
       "Solutions Builder"
     ],
     "resumeButton": {
-      "resumeLink": "https://drive.google.com/file/d/1nJ23OqG2F7hrFOo2lzEcmT_ENOQkNy4e/view?usp=sharing",
+      "resumeLinks": {
+        "en": "https://drive.google.com/file/d/1nJ23OqG2F7hrFOo2lzEcmT_ENOQkNy4e/view",
+        "fr": "https://drive.google.com/file/d/1zGAUmi3Msnl-aselTueK09uFPkpR5RXC/view?usp=sharing",
+        "de": "https://drive.google.com/file/d/1nJ23OqG2F7hrFOo2lzEcmT_ENOQkNy4e/view?usp=sharing"
+      },
       "resumeGradient": "linear-gradient(90deg, #2A7B9B, #57C785)",
       "resumeOriginalGradient": "linear-gradient(90deg, #2A7B9B, #57C785)",
       "resumeColor1": "#2A7B9B",

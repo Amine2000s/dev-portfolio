@@ -26,7 +26,12 @@ interface RightSideProps {
     }[];
   };
   resumeButton: {
-    resumeLink: string;
+    resumeLinks?: {
+      en?: string;
+      fr?: string;
+      de?: string;
+    };
+    resumeLink?: string; // Fallback for old format
     resumeGradient: string;
     resumeColor1: string;
   };
@@ -44,7 +49,19 @@ const RightSide = ({
   resumeButton,
   links,
 }: RightSideProps) => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  
+  // Get the resume link based on the current language
+  const getResumeLink = () => {
+    if (resumeButton.resumeLinks) {
+      // Use language-specific resume link, fallback to English if not available
+      return resumeButton.resumeLinks[language] || resumeButton.resumeLinks.en || resumeButton.resumeLink || '#';
+    }
+    // Fallback to old format
+    return resumeButton.resumeLink || '#';
+  };
+  
+  const resumeLink = getResumeLink();
   const getIcon = (iconName: string) => {
     switch (iconName.toLowerCase()) {
       case "github":
@@ -88,7 +105,7 @@ const RightSide = ({
             }}
           >
             <a
-              href={resumeButton.resumeLink}
+              href={resumeLink}
               target="_blank"
               rel="noopener noreferrer"
               className="relative flex items-center gap-2"
