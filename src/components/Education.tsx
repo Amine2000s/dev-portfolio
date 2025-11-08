@@ -45,6 +45,7 @@ const Education = () => {
                     description={translatedEdu.description}
                     logo={getLogoComponent()}
                     small={false}
+                    companyLogo={item.logoUrl}
                   />
                 </div>
               );
@@ -57,6 +58,7 @@ const Education = () => {
                     foundation={translatedEdu.institution}
                     description={translatedEdu.description}
                     logo={getLogoComponent()}
+                    companyLogo={item.logoUrl}
                   />
                 </div>
               );
@@ -71,18 +73,19 @@ const Education = () => {
         <ul className="space-y-12">
           {data.map((item, index) => {
             const translatedEdu = translatedEducation[index] || item;
-            return (
-              <div key={index} className="relative">
-                <ExperienceCardLeft
-                  date={translatedEdu.period || ""}
-                  title={translatedEdu.title}
-                  foundation={translatedEdu.institution}
-                  description={translatedEdu.description}
-                  logo={getLogoComponent(item)}
-                  small={true}
-                />
-              </div>
-            );
+              return (
+                <div key={index} className="relative">
+                  <ExperienceCardLeft
+                    date={translatedEdu.period || ""}
+                    title={translatedEdu.title}
+                    foundation={translatedEdu.institution}
+                    description={translatedEdu.description}
+                    logo={getLogoComponent()}
+                    small={true}
+                    companyLogo={item.logoUrl}
+                  />
+                </div>
+              );
           })}
         </ul>
       </div>
