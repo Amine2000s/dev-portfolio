@@ -7,13 +7,14 @@ import svgr from "vite-plugin-svgr";
 // IMPORTANT: Update the base path to match your GitHub repository name
 // If repo is at username.github.io/repo-name, use '/repo-name/'
 // If repo is at username.github.io (root), use '/'
-const REPO_NAME = 'dev-portfolio'; // Repository name: dev-portfolio
+// Based on the error, your site is at the root, so using '/'
+const REPO_NAME = ''; // Empty for root deployment (username.github.io)
 
 export default defineConfig({
   plugins: [react(), tailwindcss(), svgr()],
-  // Always use base path for GitHub Pages deployment
-  // For local development, use: npm run dev -- --base /
-  base: `/${REPO_NAME}/`,
+  // Base path for GitHub Pages deployment
+  // Change to '/repo-name/' if deploying to a project repository
+  base: REPO_NAME ? `/${REPO_NAME}/` : '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
