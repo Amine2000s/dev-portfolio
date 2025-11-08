@@ -53,12 +53,12 @@ const Navbar = () => {
     <>
       <nav>
         {/* Desktop Navbar - hidden on mobile */}
-        <ul className="hidden md:flex fixed top-2 sm:top-4 left-0 right-0 z-40 rounded-full bg-[#211f2a] max-w-[600px] mx-auto items-center justify-evenly py-2 sm:py-3 md:py-4 gap-1 sm:gap-2 px-2 sm:px-4">
+        <ul className="hidden md:flex fixed top-2 sm:top-4 left-0 right-0 z-40 rounded-full bg-[#211f2a] max-w-[700px] mx-auto items-center justify-evenly py-2 sm:py-3 md:py-4 gap-2 sm:gap-3 md:gap-4 px-3 sm:px-5 md:px-6">
           {navItems.map((item) => (
             <li key={item.key}>
               <a
                 href={item.href}
-                className="text-sm sm:text-base md:text-lg font-medium text-white/60 hover:text-white transition-all duration-300"
+                className="text-sm sm:text-base md:text-lg font-medium text-white/60 hover:text-white transition-all duration-300 whitespace-nowrap"
               >
                 {t(`navbar.${item.key}`)}
               </a>

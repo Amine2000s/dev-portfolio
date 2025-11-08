@@ -1,5 +1,5 @@
 import { FaGithub, FaLinkedin, FaBriefcase } from "react-icons/fa";
-import { SiCodeforces, SiLeetcode } from "react-icons/si";
+import { SiLeetcode } from "react-icons/si";
 import {
   MdSchool,
   MdWork,
@@ -101,12 +101,6 @@ export const SocialLinks = [
     id: "linkedin",
     icon: FaLinkedin,
     link: "https://www.linkedin.com/in/youssif-hassan-50b226247/",
-    preview: true,
-  },
-  {
-    id: "codeforces",
-    icon: SiCodeforces,
-    link: "https://codeforces.com/profile/Youssif_Hassan",
     preview: true,
   },
   {

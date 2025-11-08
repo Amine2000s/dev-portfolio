@@ -8,7 +8,7 @@ import {
   FaLinkedin,
   FaXTwitter,
 } from "react-icons/fa6";
-import { SiCodeforces, SiLeetcode } from "react-icons/si";
+import { SiLeetcode } from "react-icons/si";
 import { useLanguage } from "../../contexts/LanguageContext";
 
 interface RightSideProps {
@@ -70,8 +70,6 @@ const RightSide = ({
         return FaLinkedin;
       case "x":
         return FaXTwitter;
-      case "codeforces":
-        return SiCodeforces;
       case "leetcode":
         return SiLeetcode;
       default:

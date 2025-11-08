@@ -53,7 +53,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="flex flex-wrap justify-center gap-8 sm:gap-12 md:gap-20 lg:gap-28 py-12 sm:py-16 md:py-20 relative"
+      className="flex flex-wrap justify-center gap-8 sm:gap-12 md:gap-20 lg:gap-28 py-16 sm:py-20 md:py-24 lg:py-32 relative"
     >
       <motion.div
         ref={leftRef}

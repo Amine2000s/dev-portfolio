@@ -9,7 +9,7 @@ const Projects = () => {
   const translatedProjects = t("projects.items") as Array<{ title: string; description: string }>;
 
   return (
-    <section id="projects" className="my-32 mx-auto max-w-6xl px-4">
+    <section id="projects" className="my-40 sm:my-48 md:my-56 mx-auto max-w-6xl px-4">
       <TitleTwo gradient={templateData.Projects.title}>{t("projects.title")}</TitleTwo>
       <p className="text-lg font-medium text-white/60 max-w-3xl text-center mx-auto mb-12">
         {t("projects.description")}

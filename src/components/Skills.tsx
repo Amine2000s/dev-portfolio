@@ -12,7 +12,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="my-32 mx-auto max-w-6xl px-4 space-y-6 relative"
+      className="my-40 sm:my-48 md:my-56 mx-auto max-w-6xl px-4 space-y-6 relative"
     >
       <TitleTwo gradient={title}>{t("skills.title")}</TitleTwo>
 

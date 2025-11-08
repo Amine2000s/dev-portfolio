@@ -13,7 +13,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative my-32 mx-auto max-w-6xl px-4 space-y-10"
+      className="relative my-40 sm:my-48 md:my-56 mx-auto max-w-6xl px-4 space-y-10"
     >
       <TitleTwo gradient={templateData.Contact.title}>{t("contact.title")}</TitleTwo>
 
